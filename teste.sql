@@ -51,3 +51,15 @@ insert into jogos(nome_jogos, ano_jogo, valor,id_genero,id_midia)values
 -- vizu --
 show tables
 select * from 
+
+--delete--
+delete from genero where id_genero =2;
+
+-- Join --
+SELECT jogos.id_jogo As codigo,
+jogos.nome_jogos AS nome,
+genero.nome_genero As gênero,
+midia.nome_midia AS midia
+from jogos
+inner join genero on jogos.id_jogo = genero.id_genero
+inner join midia on jogos.id_jogo = midia.id_midia; 
